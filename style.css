@@ -1,0 +1,149 @@
+
+/* 전체 페이지 */
+body {
+  background: #fff0f6;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 50px 20px;
+  color: #a83268;
+}
+
+/* 제목 */
+h1 {
+  color: #ff69a6;
+  font-size: 38px;
+  text-shadow: 2px 2px 0px white,
+               4px 4px 0px #ffc1dc;
+  margin-bottom: 15px;
+}
+
+/* 안내 문구 */
+#message {
+  color: #d979a5;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+/* 입력창 */
+#todoInput {
+  width: 230px;
+  padding: 13px;
+  border: 2px solid #ff9fc8;
+  border-radius: 20px;
+  outline: none;
+  background: white;
+  color: #a83268;
+  font-size: 14px;
+  box-shadow: 0 3px 8px #ffc5dd;
+}
+
+#todoInput:focus {
+  border-color: #ff4f9a;
+  box-shadow: 0 0 10px #ffaad0;
+}
+
+/* 버튼 공통 */
+button {
+  border: none;
+  background: #ff80b5;
+  color: white;
+  padding: 11px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 5px;
+  box-shadow: 0 3px 6px #f8b5d0;
+  transition: 0.2s;
+}
+
+/* 버튼에 마우스를 올렸을 때 */
+button:hover {
+  background: #ff4f9a;
+  transform: scale(1.08);
+}
+
+/* 할 일 목록 */
+#todoList {
+  background: #fffafd;
+  border: 3px dashed #ffacd0;
+  border-radius: 25px;
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  list-style: none;
+  box-shadow: 0 5px 15px #f8c5dc;
+}
+
+/* 각각의 할 일 */
+#todoList li {
+  background: #fff0f6;
+  border: 1px solid #ffc1dc;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 12px 0;
+  color: #b34b7d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 할 일 텍스트 */
+#todoList li span {
+  cursor: pointer;
+  flex: 1;
+  text-align: left;
+  word-break: break-word;
+}
+
+/* 완료된 할 일 */
+.completed {
+  text-decoration: line-through;
+  color: #d9a2ba !important;
+  opacity: 0.7;
+}
+
+/* 삭제 버튼 */
+#todoList li button {
+  background: #ffb6c1;
+  font-size: 12px;
+  padding: 8px 13px;
+  flex-shrink: 0;
+}
+
+#todoList li button:hover {
+  background: #ff6f91;
+}
+
+/* 할 일 개수 */
+#todoCount {
+  display: inline-block;
+  background: white;
+  border: 2px solid #ffacd0;
+  border-radius: 20px;
+  padding: 13px 25px;
+  color: #e75494;
+  font-weight: bold;
+  box-shadow: 0 3px 10px #ffc5dd;
+  margin-top: 5px;
+}
+
+/* 작은 화면 */
+@media (max-width: 480px) {
+  body {
+    padding: 35px 12px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  #todoInput {
+    width: 55%;
+  }
+
+  #todoList {
+    padding: 12px;
+  }
+}
